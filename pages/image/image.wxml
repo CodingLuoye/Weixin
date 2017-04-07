@@ -13,15 +13,12 @@
     </view>
    </view>
    <text style="font-size: 30rpx">{{item.text}}</text>
-   <!-- 当时gif图 -->
-   <view wx:if="{{item.is_gif != 0}}" style="position: relative;">
-    <image class="centerContent" src="{{item.cdn_img}}" mode="aspectFill" />
-   </view>
    <!-- 普通大图 可点击查看全部图片 -->
-   <view data-url="{{item.cdn_img}}" data-height="{{item.height}}" data-width="{{item.width}}"
-      bindtap="lookBigPicture" wx:elif="{{item.is_gif == 0}}" style="position: relative;">
+   <view data-url="{{item.image0}}" 
+   data-height="{{item.height}}" data-width="{{item.width}}"
+   bindtap="lookBigPicture" style="position: relative;">
     <!-- 图片资源 -->
-    <image class="centerContent" src="{{item.cdn_img}}" mode="aspectFill" />
+    <image class="centerContent" src="{{item.image0}}" mode="aspectFill" />
     <!-- 图片上浮动的点击查看详情图片view -->
     <view class="flexView">
      <image src="../../image/seeBigPicture.png" style="width: 60rpx; height: 60rpx;" />
@@ -32,11 +29,11 @@
    <view class="bottomView">
     <view class="bottomItemView">
      <image class="bottomItemImage" src="../../image/ding.png" />
-     <text class="bottomItemText">{{item.ding}}</text>
+     <text class="bottomItemText">{{item.love}}</text>
     </view>
     <view class="bottomItemView">
      <image class="bottomItemImage" src="../../image/cai.png" />
-     <text class="bottomItemText">{{item.cai}}</text>
+     <text class="bottomItemText">{{item.hate}}</text>
     </view>
     <view class="bottomItemView">
      <image class="bottomItemImage" src="../../image/share.png" />

@@ -53,8 +53,7 @@ Page({
     pointCode:'1',
     title:'',
     type:'29',
-    showapi_sign:'5af5581b74a5439ba96c0d3cdda4daec',
-    maxtime: that.data.maxtime,
+    showapi_sign:'5af5581b74a5439ba96c0d3cdda4daec'
    },
    method: 'get',
    success: function (res) {
@@ -62,9 +61,9 @@ Page({
     console.log('上一页', that.data.list)
     that.setData({
      // 拼接数组
-     list: that.data.list.concat(res.data.list),
+     list: that.data.list.concat(res.data.showapi_res_body.pagebean.contentlist),
      loadingHidden: true,
-     maxtime: res.data.info.maxtime
+ //    maxtime: res.data.info.maxtime
     })
  
    }

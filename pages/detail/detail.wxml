@@ -1,2 +1,4 @@
-<!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<loading hidden="{{loadingHidden}}">正在加载...</loading>
+<view class="" bindtap="lookBigPicture">
+<image src="{{url}}" mode="aspectFit" style="width:245px;heigth:1245px"/>
+</view>

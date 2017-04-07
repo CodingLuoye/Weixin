@@ -66,8 +66,8 @@
 }
 /*Item中的文字样式 顶 踩 分享 评论*/
 .bottomItemText{
- font-size: 15rpx;
- color: #b8b2b2;
+ font-size: 18rpx;
+ color: #000000;
  margin-left: 10rpx;
  margin-top: 8rpx;
 }
